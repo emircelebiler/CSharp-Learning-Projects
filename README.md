@@ -13,3 +13,7 @@ This repository includes small C# projects I developed to practice and reinforce
 ---
 
 More will be added as I go.
+### BMI Calculator
+- This console application calculates Body Mass Index (BMI).
+- It asks for the user's weight (kg) and height (m).
+- Then, it returns the BMI value and categorizes it (Underweight, Normal, Overweight, Obese).
