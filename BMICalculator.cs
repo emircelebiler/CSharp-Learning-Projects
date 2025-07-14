@@ -11,32 +11,34 @@ namespace BedenKitleEndeksi
         static void Main(string[] args)
         {
 
+            Console.WriteLine("Enter your weight (kg):");
+            int weight = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter your height (m):");
+            double height = Convert.ToDouble(Console.ReadLine());
+
+            double bmi = weight / (height * height);
+
+           if (bmi <= 18)
+           {
+               Console.WriteLine("UNDERWEIGHT");
+               Console.ReadLine();
+           }
+           else if (bmi > 18 && bmi < 25)
+           {
+               Console.WriteLine("NORMAL");
+               Console.ReadLine();
+           }
+           else if (bmi > 25)
+           {
+               Console.WriteLine("OBESE");
+               Console.ReadLine();
+           }
+
+           
+
+
             
-            Console.WriteLine("Kilonuzu Giriniz");
-            int kilo = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Boyunuzu Giriniz");
-            double boy = Convert.ToDouble(Console.ReadLine());
-
-            double kitle_endeksi = kilo / (boy * boy);
-
-            if (kitle_endeksi<=18)
-            {
-                Console.WriteLine("ZAYIF");
-                Console.ReadLine();
-            }
-            else if(kitle_endeksi>18 &&  kitle_endeksi<25)
-            {
-                Console.WriteLine("NORMAL");
-                Console.ReadLine();
-
-            }
-            else if(kitle_endeksi>25)
-            {
-                Console.WriteLine("OBEZ");
-                Console.ReadLine();
-
-            }
         }
     }
 }
