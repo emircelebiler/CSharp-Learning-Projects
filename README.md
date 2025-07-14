@@ -1,16 +1,15 @@
 # CSharp-Learning-Projects
-C# öğrenirken yaptığım örnek projeler
+Example projects developed during my C# learning process.
 # CSharp Learning Projects
 
-Bu repository, C# öğrenirken yaptığım küçük uygulamaları içerir.
-
-## Projeler
+This repository includes small C# projects I developed to practice and reinforce what I’ve learned.
+## Projects
 
 ### Mini ATM
-- Basit bir ATM simülasyonu.
-- Kullanıcı bakiye görüntüleyebilir, para yatırabilir, para çekebilir.
-- Console tabanlı uygulama.
+- A basic ATM simulation built with C#.
+- Allows the user to check balance, deposit funds, and withdraw money.
+- Runs in the console.
 
 ---
 
-Yeniler geldikçe buraya ekleyeceğim.
+More will be added as I go.
