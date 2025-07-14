@@ -10,66 +10,58 @@ namespace MiniATM
     {
         static void Main(string[] args)
         {
-            int bakiye = 1000;
-            //Kullanıcıya soracağız nasıl bir işlem yapmak istediğini
-            //1-bakiye görünteleme
-            //2-para çekme
-            //3-para yatırma
-            //q ya basarsa çıkış yapacağız
+           int balance = 1000;
+// We'll ask the user which action they want to perform:
+// 1 - View balance
+// 2 - Withdraw money
+// 3 - Deposit money
+// If the user presses 'q', the program will exit
 
-            Console.WriteLine("Atm ye hoşgeldiniz");
-            Console.WriteLine("Yapmak istediğiniz işlemi seçiniz");
+Console.WriteLine("Welcome to the ATM");
+Console.WriteLine("Please select the operation you want to perform");
 
-            string secim = Console.ReadLine();
+string choice = Console.ReadLine();
 
-            if (secim =="1")
-            {
-                Console.WriteLine("Şuanki bakiyeniz :" + bakiye);
-                Console.ReadLine();
-            }
-            else if (secim =="2") 
-            {
-                Console.WriteLine("Çekmek istediğinizi tutarı giriniz");
-                int cekilecek_tutar = Convert.ToInt32(Console.ReadLine());
+if (choice == "1")
+{
+    Console.WriteLine("Your current balance is: " + balance);
+    Console.ReadLine();
+}
+else if (choice == "2")
+{
+    Console.WriteLine("Enter the amount you want to withdraw:");
+    int withdrawAmount = Convert.ToInt32(Console.ReadLine());
 
-                if (cekilecek_tutar<=bakiye)
-                {
+    if (withdrawAmount <= balance)
+    {
+        Console.WriteLine("Remaining balance: " + (balance - withdrawAmount));
+        Console.ReadLine();
+    }
+    else
+    {
+        Console.WriteLine("You cannot withdraw more than your current balance.");
+        Console.ReadLine();
+    }
+}
+else if (choice == "3")
+{
+    Console.WriteLine("Enter the amount you want to deposit:");
+    int depositAmount = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Kalan tutar :" + (bakiye - cekilecek_tutar));
-                    Console.ReadLine();
-                }
-                else
-                {
-                    Console.WriteLine("Bakiyenizden fazla para çekemezsiniz");
-                    Console.ReadLine();
-
-                }
-
-
-
-            }
-            else if(secim =="3")
-            {
-                Console.WriteLine("Yatırmak istediğiniz tutarı giriniz");
-                int yatıralacak_tutar = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Yeni Bakiyeniz :"+ (bakiye+yatıralacak_tutar));
-                Console.ReadLine();
-
-            }
-            else if (secim=="q")
-            {
-                Console.WriteLine("ATM den çıkış yapılıyor");
-                Console.WriteLine("Çıkış yapıldı...");
-                Console.ReadLine();
-
-            }
-            else
-            {
-                Console.WriteLine("Lütfen geçerli bir değer giriniz");
-                Console.ReadLine();
-
-            }
+    Console.WriteLine("Your new balance is: " + (balance + depositAmount));
+    Console.ReadLine();
+}
+else if (choice == "q")
+{
+    Console.WriteLine("Logging out from the ATM...");
+    Console.WriteLine("Exited.");
+    Console.ReadLine();
+}
+else
+{
+    Console.WriteLine("Please enter a valid option.");
+    Console.ReadLine();
+}
 
 
 
